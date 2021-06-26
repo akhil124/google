@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> -->
+    <style>
+      html {
+  height: 100%;
+}
+body {
+  background-color: #1C8D73;
+  height: 100%;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #02B290;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .file-upload {
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #fff;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, #50DBB4 50%, #fff 50%);
+  background-size: 100% 200%;
+  transition: all 1s;
+  color: #fff;
+  font-size: 100px;
+}
+.wrapper .file-upload input[type="file"] {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.wrapper .file-upload:hover {
+  background-position: 0 -100%;
+  color: #50DBB4 ;
+}
+.wrapper2{
+  text-align: center;
+}
+
+    </style>
+    <title>Image Search</title>
+  </head>
+  <body>
+    
+    
+      <form method="POST" action="" enctype="multipart/form-data">
+        <img src="{{url_for('static',filename='images/symbol.png')}}" alt="alternatetext"width="500" height="400">
+       
+        <div class="wrapper">
+          <div class="file-upload">
+        <p><input type="file" name="file"></p>
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="wrapper2">
+      <div class="file-upload">
+        <p><input type="submit" class="button" value="Submit"></p>
+  </div>
+
+    </form>
+    </body>
+</html>
