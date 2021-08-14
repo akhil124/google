@@ -15,11 +15,11 @@ def upload_file():
     uploaded_file = request.files['file']
     if uploaded_file.filename != '':
         uploaded_file.save(uploaded_file.filename)
-        res, url = recognizer(uploaded_file.filename)
+        res, url, plot,video= recognizer(uploaded_file.filename)
         summary = give_details(res).split('.')
         os.remove(uploaded_file.filename)
     images=getImageData(res[:3].lower())
-    return render_template("Home.html",res=res,details=summary,images=images, url = url)
+    return render_template("Home.html",res=res,details=summary,images=images, url = url,plot=plot,video=video)
 
 if __name__ == '__main__':
    app.run(debug = True)

@@ -1,12 +1,12 @@
 label = {
-    0:"Aeroplane",
-    1:"AgraFort",
-    2:"Charminar",
-    3:"Golkonda",
-    4:"Pyramids of Giza",
-    5:"TajMahal",
-    6:"Burj Khalifa",
-    7:"Konark",
-    8:"StoneHenge",
-    9:"Leaning Tower of Pisa"
+    0:"AgraFort",
+    1:"Charminar",
+    2:"Golkonda",
+    3:"KonarkSunTemple",
+    4:"LeaningTowerOfPisa",
+    5:"StoneHenge",
+    6:"TajMahal",
+    7:"BurjKhalifa",
+    8:"OperaHouse",
+    9:"PyramidsOfGiza"
 }
